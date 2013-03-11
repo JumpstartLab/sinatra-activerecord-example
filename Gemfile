@@ -5,5 +5,9 @@ source "https://rubygems.org"
 gem 'sinatra'
 gem 'shotgun'
 gem 'sinatra-activerecord'
-gem 'sqlite3'
+gem 'pg'
 gem 'rake'
+
+group :development do
+  gem 'sqlite3'
+end
