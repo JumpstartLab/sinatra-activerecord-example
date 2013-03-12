@@ -24,6 +24,11 @@ class Server < Sinatra::Base
     # User.find_by_username("elaine").urls
   end
 
+  get "/delete/elaine" do
+    user = User.find_by_username "elaine"
+    user.destroy
+  end
+
   get '/shorten_test' do
     Url.create original: "http://jumpstartlab.com", shortened: "js"
   end
