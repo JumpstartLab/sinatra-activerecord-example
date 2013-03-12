@@ -3,6 +3,8 @@ require 'sinatra/activerecord'
 require 'json'
 
 require './url'
+require './user'
+require './user_url'
 
 ENV['DATABASE_URL'] ||= "sqlite3:///database.sqlite"
 
@@ -13,6 +15,13 @@ class Server < Sinatra::Base
 
   get "/" do
     erb :home
+  end
+
+  get "/users/elaine" do
+    user = User.find_or_create_by_username "elaine"
+    puts user.urls.first.inspect
+    user.urls.join("\n")
+    # User.find_by_username("elaine").urls
   end
 
   get '/shorten_test' do
