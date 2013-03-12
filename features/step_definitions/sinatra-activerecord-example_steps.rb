@@ -1,10 +1,12 @@
 
 Given(/^that I am an anonymous user of the system$/) do
-  pending # express the regexp above with the code you wish you had
+  #pending # express the regexp above with the code you wish you had
 end
 
 When(/^I visit the site$/) do
-  pending # express the regexp above with the code you wish you had
+  # pending # express the regexp above with the code you wish you had
+  visit "/"
+  sleep 10
 end
 
 When(/^give a URL to the service$/) do
