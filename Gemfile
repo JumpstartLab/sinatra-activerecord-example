@@ -10,4 +10,6 @@ gem 'rake'
 
 group :development do
   gem 'sqlite3'
+  gem 'cucumber'
+  gem 'capybara'
 end

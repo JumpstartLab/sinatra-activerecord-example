@@ -2,7 +2,7 @@ require 'sinatra'
 require 'sinatra/activerecord'
 require 'json'
 
-require './url'
+require 'url'
 
 ENV['DATABASE_URL'] ||= "sqlite3:///database.sqlite"
 
